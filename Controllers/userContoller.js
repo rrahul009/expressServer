@@ -6,10 +6,11 @@ exports.signup = async (req, res) => {
     const data = new User(req.body);
     data.otp = random();
     await data.save();
-    res.status(200).json({ status: 200, msg: "User saved successfully", data });
+    res.status(200).json({ status: 200, msg: "User saved successfully", data }); 
   } catch (error) {
     console.error(error);
     res.status(500).json({ status: 500, msg: "Something went wrong" });
+    //fghbjnkml,;./
   }
 };
 
